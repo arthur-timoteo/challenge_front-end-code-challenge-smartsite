@@ -1,0 +1,27 @@
+header {
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    padding: 2rem 0;
+    margin-bottom: 50px;
+}
+
+header img {
+    height: 4rem;
+}
+
+.header-page > .header-page-title {
+    color: var(--dark-grey);
+}
+
+.header-page > .header-page-underscore {
+    display: block;
+    background: var(--dark-grey);
+    width: 5rem;
+    height: 0.5rem;
+    margin-bottom: 2rem;
+}
+
+.header-page > .header-page-p {
+    color: var(--light-grey);
+}
