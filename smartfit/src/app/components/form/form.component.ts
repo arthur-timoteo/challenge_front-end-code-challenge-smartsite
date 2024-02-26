@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { FormBuilder, FormGroup } from '@angular/forms';
+import { UnitsService } from '../../services/units.service';
 
 @Component({
   selector: 'app-form',
@@ -9,7 +10,7 @@ import { FormBuilder, FormGroup } from '@angular/forms';
 export class FormComponent {
   formGroup!: FormGroup;
 
-  constructor(private formBuilder: FormBuilder) {}
+  constructor(private formBuilder: FormBuilder, private unitService: UnitsService) {}
 
   ngOnInit(): void {
     this.formGroup = this.formBuilder.group({
@@ -19,7 +20,8 @@ export class FormComponent {
   }
 
   onSubmit(): void {
-    console.log("Submit");
+    this.unitService.getAllUnits()
+      .subscribe(data => console.log(data));
   }
 
   onClean(): void {
