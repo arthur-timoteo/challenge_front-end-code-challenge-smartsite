@@ -33,7 +33,7 @@
                 <input type="checkbox" name="showClosedUnits" formControlName="showClosedUnits">
                 Exibir unidades fechadas
             </div>
-            <p>Resultados encontrados: <span>0</span></p>
+            <p>Resultados encontrados: <span>{{ units.length }}</span></p>
         </div>
         <div class="buttons">
             <button class="btn btn-primary" (click)="onSubmit()">ENCONTRAR UNIDADE</button>
