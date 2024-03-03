@@ -63,9 +63,9 @@ export class FormComponent {
     let { period } = this.formGroup.value;
 
     if(this.formGroup.value.showClosedUnits){
-      return period == '' ? this.unitsBase : this.filterUnitsByHour(this.unitsBase, period);
+      return period == '' ? this.unitsBase : period === null ? this.unitsBase : this.filterUnitsByHour(this.unitsBase, period);
     } else {
-      return period == '' ? this.unitsBase.filter(unit => unit.opened === true) : this.filterUnitsByHour(this.unitsBase.filter(unit => unit.opened === true), period);
+      return period == '' ? this.unitsBase.filter(unit => unit.opened === true) : period === null ? this.unitsBase.filter(unit => unit.opened === true) : this.filterUnitsByHour(this.unitsBase.filter(unit => unit.opened === true), period);
     }
   }
 
