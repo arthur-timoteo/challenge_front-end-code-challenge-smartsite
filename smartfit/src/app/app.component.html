@@ -1,4 +1,8 @@
 <div class="app-container">
     <app-header></app-header>
-    <app-form></app-form>
+    <app-form
+        (sharedUnits)="onSubmit($event)"
+    ></app-form>
+
+    <p>qntd: {{ units.length }}</p>
 </div>

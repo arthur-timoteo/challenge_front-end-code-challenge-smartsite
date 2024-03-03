@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, EventEmitter, Output } from '@angular/core';
 import { FormBuilder, FormGroup } from '@angular/forms';
 import { UnitsService } from '../../services/units.service';
 import { Location } from '../../types/location';
@@ -26,6 +26,7 @@ type PERIODS_INDEXES = 'morning' | 'afternoon' | 'night';
   styleUrl: './form.component.scss'
 })
 export class FormComponent {
+  @Output() sharedUnits: EventEmitter<Location[]> = new EventEmitter();
   formGroup!: FormGroup;
   unitsBase: Location[] = [];
   units: Location[] = [];
@@ -48,13 +49,13 @@ export class FormComponent {
           this.unitsBase = data.locations;
           
           this.units = this.filterUnits();
-          console.log(this.units);
+          this.sharedUnits.emit(this.units);
         });
 
       this.firstSearch = false;
     } else {
       this.units = this.filterUnits();
-      console.log(this.units);
+      this.sharedUnits.emit(this.units);
     }
   }
 
