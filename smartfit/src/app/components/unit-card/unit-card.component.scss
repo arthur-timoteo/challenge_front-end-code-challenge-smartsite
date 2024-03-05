@@ -1,0 +1,90 @@
+.card {
+    display: flex;
+    background-color: var(--ultra-light-grey);
+    border-radius: 5px;
+    -webkit-box-shadow: 0px 5px 15px var(--light-grey);
+    -moz-box-shadow: 0px 5px 15px var(--light-grey);
+    box-shadow: 0px 5px 15px var(--light-grey);
+    min-height: 541px;
+}
+
+.card .card-content {
+    padding: 30px;
+    width: 100%;
+}
+
+.card .card-content span {
+    font-weight: 700;
+    color: var(--red);
+}
+
+.card .card-content span.opened {
+    color: var(--green);
+}
+
+.card .card-content h2 {
+    color: var(--dark-grey);
+}
+
+.card .card-content p {
+    color: var(--light-grey);
+}
+
+.card .card-content hr {
+    border-color: var(--ultra-light-grey);
+}
+
+.card .card-content .legend-list {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.card .card-content .legend-list > img {
+    height: 4rem;
+}
+
+.card .card-content .periods {
+    display: inline-block;
+    margin-top: 30px;
+}
+
+.card .card-content .periods > .periods-item {
+    display: inline-block;
+    flex: 0 0 auto;
+    margin-bottom: 25px;
+    margin-right: 20px;
+}
+
+.card .card-content .periods > .periods-item:last-child {
+    margin-bottom: 0px;
+    margin-right: 0px;
+}
+
+.card .card-content .periods > .periods-item > h3 {
+    margin-top: 0px;
+}
+
+.card .card-content .periods > .periods-item > h3, .card .card-content .periods > .periods-item > p {
+    color: var(--dark-grey);
+    margin-bottom: 0px;
+}
+
+@media screen and (max-width: 767px) {
+    .card {
+        min-height: 458px;
+    }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1399px) {
+    .card {
+        min-height: 576px;
+    }
+}
+
+@media screen and (min-width: 1399px) {
+    .card {
+        min-height: 540px;
+    }
+}

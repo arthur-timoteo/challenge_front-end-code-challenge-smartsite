@@ -5,5 +5,9 @@
     ></app-form>
     <app-legend></app-legend>
 
-    <p>qntd: {{ units.length }}</p>
+    <ul class="container" *ngIf="units">
+        <li *ngFor="let item of units" style="display: inline-table;">
+            <app-unit-card [unit]="item"></app-unit-card>
+        </li>
+    </ul>
 </div>

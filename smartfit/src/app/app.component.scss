@@ -4,3 +4,47 @@
     flex-direction: column;
     gap: 30px;
 }
+
+ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding-inline-start: 0px;
+    margin: 0 auto;
+    gap: 18px;
+}
+
+ul li {
+    list-style: none;
+    width: max-content;
+}
+
+@media screen and (max-width: 767px) {
+    ul li  {
+        width: max-content;
+    }
+}
+
+@media screen and (min-width: 768px) and (max-width: 991px) {
+    ul li  {
+        width: 40%;
+    }
+}
+
+@media screen and (min-width: 992px) and (max-width: 1199px) {
+    ul li  {
+        width: 32.2%;
+    }
+}
+
+@media screen and (min-width: 1200px) and (max-width: 1399px) {
+    ul li  {
+        width: 32.2%;
+    }
+}
+
+@media screen and (min-width: 1399px) {
+    ul li  {
+        width: 32.4%;
+    }
+}
