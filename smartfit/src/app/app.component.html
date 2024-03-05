@@ -1,2 +1,13 @@
-<app-header></app-header>
-<app-form></app-form>
+<div class="app-container">
+    <app-header></app-header>
+    <app-form
+        (sharedUnits)="onSubmit($event)"
+    ></app-form>
+    <app-legend></app-legend>
+
+    <ul class="container" *ngIf="units">
+        <li *ngFor="let item of units" style="display: inline-table;">
+            <app-unit-card [unit]="item"></app-unit-card>
+        </li>
+    </ul>
+</div>
