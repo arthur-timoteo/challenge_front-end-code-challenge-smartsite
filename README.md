@@ -1,6 +1,6 @@
 # Challenge Front-end Smart Fit
 
-![Smart Fit](./src/assets/images/logo.svg)
+![Smart Fit](./smartfit/src/assets/images/logo.svg)
 
 ## About
 Smart Fit's challenge is this small project created as a basis for the assessment of technical skills for the Front-end role.
@@ -25,7 +25,6 @@ Smart Fit, as it operates in the fitness segment, went through several changes i
 Clone this repository
 ```bash
   git clone https://github.com/arthur-timoteo/challenge_front-end-code-challenge-smartsite.git
-  cd smartfit-frontend-challenge
 ```
 
 Access project folder
