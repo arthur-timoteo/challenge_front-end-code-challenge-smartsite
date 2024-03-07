@@ -1,0 +1,18 @@
+footer {
+    background-color: var(--dark-grey);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 40px;
+}
+
+footer img {
+    height: 40px;
+}
+
+footer p {
+    color: var(--extra-light-grey);
+    font-size: 14px;
+    margin-bottom: 0px;
+}
