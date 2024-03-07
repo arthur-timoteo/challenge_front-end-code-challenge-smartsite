@@ -9,6 +9,7 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { LegendComponent } from './components/legend/legend.component';
 import { UnitCardComponent } from './components/unit-card/unit-card.component';
+import { FooterComponent } from './components/footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { UnitCardComponent } from './components/unit-card/unit-card.component';
     HeaderComponent,
     FormComponent,
     LegendComponent,
-    UnitCardComponent
+    UnitCardComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,
