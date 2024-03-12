@@ -1,0 +1,14 @@
+name: [DEVELOP] Push - Block
+
+on:
+  push:
+    branches: [ "develop" ]
+
+jobs:
+  block:
+
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: Add failure
+      run: exit 1
