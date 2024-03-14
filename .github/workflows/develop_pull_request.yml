@@ -6,12 +6,12 @@ on:
 
 jobs:
   build:
-
     runs-on: ubuntu-latest
 
     strategy:
       matrix:
         node-version: [20.11.0]
+      working-directory: ./smartfit/
 
     steps:
     - uses: actions/checkout@v3
@@ -20,5 +20,6 @@ jobs:
       with:
         node-version: ${{ matrix.node-version }}
         cache: 'npm'
+        cache-dependency-path: ${{ working-directory }} package-lock.json
     - run: npm ci
     - run: npm run build --if-present
