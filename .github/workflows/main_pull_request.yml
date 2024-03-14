@@ -8,6 +8,7 @@ env:
   applicationfolder: smartfit
   AWS_REGION: us-east-1
   S3BUCKET: codedeploystack-webappdeploymentbucket-hewnfbairdwf
+  working_directory: ./smartfit/
 
 
 jobs:
@@ -16,7 +17,7 @@ jobs:
     runs-on: ubuntu-latest
     defaults:
        run:
-         working-directory: ./smartfit/
+         working-directory: ${{ env.working_directory }}
     permissions:
       id-token: write
       contents: read
@@ -35,6 +36,7 @@ jobs:
         with:
           node-version: ${{ matrix.node-version }}
           cache: 'npm'
+          cache-dependency-path: '${{ env.working_directory }}package-lock.json'
 
       - name: chmod
         run: chmod -R +x ./.github
