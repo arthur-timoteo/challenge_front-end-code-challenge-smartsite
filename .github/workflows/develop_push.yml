@@ -1,4 +1,4 @@
-name: [DEVELOP] Push - Block
+name: DEVELOP - Push - Block
 
 on:
   push:
