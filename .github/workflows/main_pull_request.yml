@@ -1,4 +1,4 @@
-name: Build and Deploy
+name: MAIN - Build and Deploy - AWS
 
 on:
   pull_request:
