@@ -38,13 +38,10 @@ jobs:
           cache: 'npm'
           cache-dependency-path: '${{ env.working_directory }}package-lock.json'
 
-      - name: chmod
-        run: chmod -R +x ./.github
-
-      - name: Build and Package Maven
-        id: package
-        working-directory: ${{ env.applicationfolder }}
-        run: npm build
+      - name: Build project
+        run: |
+          npm ci 
+          npm run build --if-present
 
       - name: Upload Artifact to s3
         working-directory: ${{ env.applicationfolder }}/dist/smartfit
