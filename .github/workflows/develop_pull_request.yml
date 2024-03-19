@@ -9,6 +9,7 @@ on:
 
 jobs:
   build:
+    if: ${{ !contains(github.head_ref, 'ci') || !contains(github.head_ref, 'doc') }}
     runs-on: ubuntu-latest
 
     defaults:
