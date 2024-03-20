@@ -14,12 +14,17 @@ Smart Fit, as it operates in the fitness segment, went through several changes i
 - Search for units with filters
 - Shows prediction of results found
 - Shows units when searching
+- CI with GitHub Actions
+- App in production with AWS
 
 ## Technologies
 - Visual Studio Code 1.87.0
 - Node.js 20.11.0
 - NPM 10.2.4
 - Angular CLI 17.1.3
+
+## AWS Architecture
+![AWS Architecture](./.github/images/architecture.png)
 
 ## How to run local
 Clone this repository
